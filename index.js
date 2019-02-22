@@ -3,14 +3,14 @@ import expressGraphQL from "express-graphql";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
-const {GraphQLSchema} = require('graphql');
 
+import schema from "./graphql/";
 
-const schema = new GraphQLSchema({});
 const app = express();
 const PORT = process.env.PORT || "4000";
 const db = "mongodb+srv://Vitor:vitor98@cluster0-yqco7.mongodb.net/test?retryWrites=true";
 
+// Connect to MongoDB with Mongoose
 mongoose
     .connect(
         db,
